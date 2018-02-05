@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { CreatePromiseComponent } from './create-promise/create-promise.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreatePromiseComponent
   ],
   imports: [
     BrowserModule
