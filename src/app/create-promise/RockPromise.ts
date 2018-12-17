@@ -1,8 +1,11 @@
-
+// tslint:disable
 class RockPromise {
+	static PENDING: any;
+	static FULFILLED: any;
+	static REJECTED: any;
 
-	private promiseStatus;
-	private promiseValue;
+  private promiseStatus;
+  private promiseValue;
 
     constructor(executor) {
         this.promiseStatus = RockPromise.PENDING;
@@ -30,9 +33,9 @@ class RockPromise {
     }
 
     then(onfulfilled, onrejected) {
-	    let _ref = null,
-	        timer = null,
-	        result = new RockPromise(() => {});
+      let _ref = null,
+        timer = null;
+      const result: any = new RockPromise(() => {});
 
 	    //因为 promise 的 executor 是异步操作,需要监听 promise 对象状态变化，并且不能阻塞线程
 	    timer = setInterval(() => {
